@@ -1,0 +1,36 @@
+package application;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+	@Override
+	public void start(Stage primaryStage) {
+		
+		// Container - 다른 요소를 담는 그릇
+		// vertical box - 수직으로 요소를 배치하는 container
+		VBox root = new VBox();
+		root.prefWidth(350);	// 폭 크기 설정
+		root.prefHeight(150);	// 높이 크기 설정
+		
+		// text 출력용 control
+		Label label = new Label();
+		label.setText("Hello JavaFX!!!");
+		
+		// VBox를 container로 지정하여 장면(Scene)을 생성
+		// Node(Fx에서 사용하는 모든 UI 요소) > Parent > 요소
+		// class 보기 = Ctrl키 누른 상태로 클래스위에 마우스 올리기 or 클래스 누르고 F3
+		Scene scene = new Scene(root);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+		
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

@@ -1,0 +1,44 @@
+package base;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class PreparedStatementExample {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		// 동적인 쿼리 객체
+		// 쿼리문을 먼저 등록 시켜놓고 질의 실해에 필요한 데이터를 나중에 추가
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = DriverManager.getConnection(
+				"jdbc:mysql://127.0.0.1:3306/sqldb","root","1234"
+				);
+			System.out.println("DB 연결 완료");
+			
+			// 등록할 질의
+			String sql = "SELECT userID, name, birthYear, addr FROM userTbl WHERE userID = ?";
+			pstmt = conn.prepareStatement(sql);
+			// ? Wildcard 자리에 데이터 삽입 - ? 배치에 따라 왼쪽에서 부터 1로 싲가해서 1씩 증가
+			// 검색할 사용자 아이디 입력받기
+			Scanner sc = new Scanner(System.in);
+			System.out.println("검색할 회원의 아이디를 작성해 주세요 >");
+			String id = sc.next();
+			
+			// 입력받은 아이디 값으로 pstmt의 SQL query 문 완성
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

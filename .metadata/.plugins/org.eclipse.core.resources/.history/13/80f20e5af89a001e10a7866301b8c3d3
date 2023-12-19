@@ -1,0 +1,9 @@
+package base;
+
+public class PreparedStatementExample {
+
+	public static void main(String[] args) {
+
+	}
+
+}

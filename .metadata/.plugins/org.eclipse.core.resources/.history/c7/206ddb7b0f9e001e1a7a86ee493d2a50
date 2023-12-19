@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+	<children>
+		<!--  input type='text' -->
+		<TextField alignment="CENTER">
+			<prefWidth>200</prefWidth>
+		</TextField>
+		<Button alignment="CENTER">
+		<text>확인</text>
+		</Button>
+	</children>
+</HBox>
+

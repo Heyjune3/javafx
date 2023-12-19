@@ -1,0 +1,18 @@
+package base;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class PreparedStatementExample {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		// 동적인 쿼리 객체
+		// 쿼리문을 먼저 등록 시켜놓고 질의 실해에 필요한 데이터를 나중에 추가
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+	}
+
+}

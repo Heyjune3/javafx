@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.control.Button?>
+<FlowPane xmlns:fx="http://javafx.com/fxml/1">
+	<!-- TODO Add Nodes -->
+	<children>
+		<Button text="Button1"/>
+		<Button text="Button2"/>
+		<Button text="Button3"/>
+		<Button text="Button4"/>
+		<Button text="Button5"/>
+		<Button text="Button6"/>
+		<Button text="Button7"/>
+		<Button text="Button8"/>
+		<Button text="Button9"/>
+		<Button text="Button10"/>
+		<Button text="Button11"/>
+		<Button text="Button12"/>
+	</children>
+</FlowPane>
+
