@@ -28,18 +28,19 @@ public class Main extends Application {
 			root.setSpacing(10.0);
 			root.setPadding(new Insets(15.0));
 			
-			Button btn1 = new Button("버튼1");	// 생성자의 매개변수로 text 지정
-			btn1.setId("btn1");					// 노드에 접근하기 위한 구별 값 id 지정
+			Button btn1 = new Button("버튼1"); // 생성자의 매개변수로 text 지정
+			btn1.setId("btn1");				  // 노드에 접근하기 위한 구별 값 id 지정
 			btn1.setPrefSize(200, 100);			// width, height, size(width,height)
 			
 			ButtonActionEventHandler handler = new ButtonActionEventHandler();
 			btn1.setOnAction(handler);
 			
+			
 			Button btn2 = new Button("버튼2");
 			EventHandler<ActionEvent> handler2 = new EventHandler<>() {
 				@Override
 				public void handle(ActionEvent arg0) {
-					System.out.println("버튼 2 click!@!@!@");
+					System.out.println("버튼 2 click!@!@!@!@");
 					primaryStage.close();
 				}
 			};
@@ -47,19 +48,17 @@ public class Main extends Application {
 			
 			Button btn3 = new Button("버튼3");
 			
-			btn3.setOnAction(new EventHandler<ActionEvent>(){
-					@Override
-					public void handle(ActionEvent arg0) {
-						System.out.println("버튼3 click!!!!");
-					}
+			btn3.setOnAction(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent arg0) {
+					System.out.println("버튼3 click!!!!");
+				}
 			});
 			
-			// 람다 표현식
 			btn3.setOnAction((e)->{
-				System.out.println("버튼 3 click!!! lamda");
+				System.out.println("버튼3 click!!! lambda");
 				Platform.exit();
 			});
-			
 			
 			// root container 에 btn1 자식 요소 추가
 			/*
@@ -83,25 +82,24 @@ public class Main extends Application {
 			// window 창 - icon 추가
 			// 1. 입력 스트림
 			ObservableList<Image> icons = primaryStage.getIcons();
-			InputStream is = getClass().getResourceAsStream("cat2-removebg.png");
+			InputStream is = getClass().getResourceAsStream("puppy.png");
 			Image image = new Image(is);
 			icons.add(image);
 			
 			// 2. URL
-			URL url = getClass().getResource("/e01_event_handler/cat2-removebg.png");
-			System.out.println(url.getPath());	// src부터 찾아들어가버림
-			System.out.println(url.toString());	// 내컴퓨터 로컬 디렉토리부터 찾기 시작함 file:/C:/...
+			URL url = getClass().getResource("/e01_event_handler/puppy.png");
+			System.out.println(url.getPath());
+			System.out.println(url.toString());
 			
 			icons.add(new Image(url.toString()));
 			
-			// https://www.remove.bg/ko 이미지 배경 삭제 사이트
 			primaryStage.setWidth(500);
 			primaryStage.setHeight(300);
 			primaryStage.setX(0);
 			primaryStage.setY(0);
 			primaryStage.setTitle("Event Handler Test");
 			primaryStage.setAlwaysOnTop(true);
-			primaryStage.setResizable(false);	// 창 크기 변경 x
+			primaryStage.setResizable(false);
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -112,3 +110,8 @@ public class Main extends Application {
 		launch(args);
 	}
 }
+
+
+
+
+

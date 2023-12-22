@@ -16,11 +16,11 @@ public class FXMLMain extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-		
+	
 		try {
 			HBox root = FXMLLoader.load(
-					getClass().getResource("Root.fxml")
-					);
+				getClass().getResource("Root.fxml")
+			);
 			
 			ObservableList<Node> list = root.getChildren();
 			System.out.println(list.get(0));
@@ -32,7 +32,7 @@ public class FXMLMain extends Application {
 			
 			Button lookUpBtn = (Button)root.lookup("#btn2");
 			System.out.println(lookUpBtn);
-			lookUpBtn.setOnAction((e)->{
+			lookUpBtn.setOnAction(e->{
 				System.out.println("버튼2 click!");
 			});
 			
@@ -44,9 +44,22 @@ public class FXMLMain extends Application {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	public static void main(String[] args) {
 		launch(args);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

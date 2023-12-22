@@ -5,7 +5,6 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
 public class ButtonActionEventHandler implements EventHandler<ActionEvent>{
-
 	@Override
 	public void handle(ActionEvent event) {
 		System.out.println(event);
@@ -13,5 +12,15 @@ public class ButtonActionEventHandler implements EventHandler<ActionEvent>{
 		String id = btn.getId();
 		System.out.println("action event btn id : " + id);
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
