@@ -1,5 +1,0 @@
-module fx04_contanier {
-	requires javafx.controls;
-	
-	opens c1_anchor_pane to javafx.graphics, javafx.fxml;
-}
