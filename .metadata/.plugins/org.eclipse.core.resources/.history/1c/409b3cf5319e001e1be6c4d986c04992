@@ -1,5 +1,0 @@
-module fx05_event_handler {
-	requires javafx.controls;
-	
-	opens application to javafx.graphics, javafx.fxml;
-}
