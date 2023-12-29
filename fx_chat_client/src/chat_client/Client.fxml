@@ -9,8 +9,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-
-<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat_client.ClientController">
+				<!-- stylesheets에 &특수문자만 amp를 뒤에 넣어야 함 -->
+<!-- 
+@https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap,
+ -->
+<BorderPane													
+stylesheets="@application.css"
+ xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat_client.ClientController">
    <center>
       <TextArea fx:id="txtDisplay" editable="false" focusTraversable="false" prefWidth="400.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>

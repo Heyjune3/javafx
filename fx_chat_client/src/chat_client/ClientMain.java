@@ -12,7 +12,10 @@ public class ClientMain extends Application {
 		try {
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Client.fxml"));
 			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			// Client.fxml 파일에
+			// stylesheets="@https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap, @application.css"
+			// 부분에 @application.css로 밑의 식을 적용시킴
+			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("CHAT_CLIENT");
 			primaryStage.setResizable(false);
